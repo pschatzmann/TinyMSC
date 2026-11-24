@@ -49,6 +49,28 @@ mounted volume into an Arduino `fs::FS`.
 - [Examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES) 
 - [Testing](https://github.com/pschatzmann/TinyMSC/wiki/TESTING)
 
+## Installation in Arduino
+
+You can download the library as zip and call include Library -> zip library. Or you can git clone this project into the Arduino libraries folder e.g. with
+
+```
+cd  ~/Documents/Arduino/libraries
+git clone https://github.com/pschatzmann/TinyMSC.git
+```
+
+The filesystems come from two separate libraries, which you need to install the same way:
+
+```
+git clone https://github.com/pschatzmann/TinyFATFS.git
+git clone https://github.com/pschatzmann/TinyEXT4.git
+```
+
+I recommend to use git because you can easily update to the latest version just by executing the ```git pull``` command in the project folders.
+
+Then add `#include "TinyMSC.h"` to your sketch and select the USB mode in the board's Tools menu. ESP32-S2/S3 and RP2040/RP2350 need nothing else; STM32, ESP32-P4 and MAX3421E boards also need the *Adafruit TinyUSB Library*. See [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS) and the [examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES).
+
+For desktop builds and tests with CMake, see [Testing](https://github.com/pschatzmann/TinyMSC/wiki/TESTING).
+
 ## License
 
 MIT. See [Licensing](https://github.com/pschatzmann/TinyMSC/wiki/LICENSING).
