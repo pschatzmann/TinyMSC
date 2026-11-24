@@ -11,8 +11,7 @@
  *
  * Board setup: see USBHostMSC_Info example.
  */
-#include "USBHostMSC.h"
-#include "USBHostMscExt4IO.h"
+#include "TinyMSC.h"
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_STM32)
 #define SerialOut Serial1

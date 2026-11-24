@@ -10,7 +10,7 @@
  * Board setup: see USBHostMSC_Info example.
  */
 
-#include "USBHostMSC.h"
+#include "TinyMSC.h"
 #include <string.h>
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_STM32)

@@ -12,7 +12,7 @@
  * ESP32-S2/S3: Tools > USB Mode > "USB-OTG (TinyUSB)".
  * RP2040:      Tools > USB Stack > "Adafruit TinyUSB" (device stack).
  */
-#include "USBDeviceMSC.h"
+#include "TinyMSC.h"
 #include "fatfs.h"
 
 RamIO ram(256); // 256 sectors * 512 bytes = 128 KB

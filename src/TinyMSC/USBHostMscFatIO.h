@@ -6,8 +6,7 @@
  * fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not).
  *
  * @code
- * #include "USBHostMSC.h"
- * #include "USBHostMscFatIO.h"
+ * #include "TinyMSC.h"
  *
  * USBHostMSC msc;
  * USBHostMscFatIO usbIO(msc);   // first drive that is plugged in

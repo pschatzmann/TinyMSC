@@ -2,8 +2,9 @@
 // Decides whether the host-mode translation units of this library are
 // compiled. Arduino builds every .cpp in src/, so without this a sketch that
 // only uses USB *device* mode (USBDeviceMSC) would fail on the host-mode
-// #error checks in USBHostMSC.h. Sketches that include USBHostMSC.h still
-// get those errors. Define USBHOSTMSC_DISABLE=1 (build flag) to force the
+// #error checks in USBHostMSC.h. TinyMSC.h only includes the parts that
+// the board can build; sketches that include TinyMSC/USBHostMSC.h directly
+// still get those errors. Define USBHOSTMSC_DISABLE=1 (build flag) to force the
 // host code off on boards where it cannot be detected automatically.
 #ifndef USBHOSTMSC_COMPILE
 #if defined(USBHOSTMSC_DISABLE)

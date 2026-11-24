@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-# Desktop (Linux/macOS) unit tests for the filesystem layer of usb-msc.
+# Desktop (Linux/macOS) unit tests for the filesystem layer of TinyMSC.
 #
 #   cmake -B build && cmake --build build && ctest --test-dir build --output-on-failure
 #
@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 3.16)
 # adapters against an image-file stub of USBHostMSC, so they can be
 # exercised with real mkfs-generated disk images, under AddressSanitizer. Needs: dosfstools, exfatprogs,
 # e2fsprogs, mtools, gdisk (sgdisk), util-linux (sfdisk).
-project(usb_msc_tests LANGUAGES CXX)
+project(tinymsc_tests LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -65,6 +65,7 @@ target_compile_definitions(usbmsc_test INTERFACE USBHOSTMSC_HOST_TEST
   FATFS_NO_MAIN)
 target_include_directories(usbmsc_test INTERFACE
   ${CMAKE_SOURCE_DIR}/src
+  ${CMAKE_SOURCE_DIR}/src/TinyMSC
   ${CMAKE_SOURCE_DIR}/tests/stub)
 # SYSTEM: don't show the (header-only) dependencies' own warnings
 target_include_directories(usbmsc_test SYSTEM INTERFACE

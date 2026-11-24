@@ -17,7 +17,7 @@
 #include <SPI.h>
 
 #include "TinyEXT4.h"
-#include "USBDeviceMSC.h"
+#include "TinyMSC.h"
 #include "tinyext4/driver/ArduinoSpiIO.h"
 
 #ifndef SD_CS

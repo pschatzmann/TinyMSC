@@ -13,8 +13,7 @@
  *
  * Board setup: see USBHostMSC_Info example.
  */
-#include "USBHostMSC.h"
-#include "USBHostMscExt4IO.h"
+#include "TinyMSC.h"
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_STM32)
 #define SerialOut Serial1
@@ -45,7 +44,7 @@ void onMount(uint8_t dev_addr) {
     SerialOut.println("  open for append failed");
     return;
   }
-  wf.printf("hello from usb-msc at millis()=%lu\r\n", (unsigned long)millis());
+  wf.printf("hello from TinyMSC at millis()=%lu\r\n", (unsigned long)millis());
   wf.close();   // writes the inode
   usbExt4.sync(); // and the metadata: safe to pull the drive now
 

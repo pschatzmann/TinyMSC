@@ -6,8 +6,7 @@
  * tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned).
  *
  * @code
- * #include "USBHostMSC.h"
- * #include "USBHostMscExt4IO.h"
+ * #include "TinyMSC.h"
  *
  * USBHostMSC msc;
  * USBHostMscExt4IO usbIO(msc);   // first drive that is plugged in

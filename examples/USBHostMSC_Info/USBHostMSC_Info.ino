@@ -22,7 +22,7 @@
  *              output goes over Serial1, same reason as RP2040.
  */
 
-#include "USBHostMSC.h"
+#include "TinyMSC.h"
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_STM32)
 // RP2040: the native USB port is claimed for host duty.

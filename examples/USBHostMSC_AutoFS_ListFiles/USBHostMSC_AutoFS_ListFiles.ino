@@ -14,9 +14,7 @@
  *
  * Board setup: see USBHostMSC_Info example. ESP32 / RP2040 only.
  */
-#include "USBHostMSC.h"
-#include "USBHostMscExt4IO.h"
-#include "USBHostMscFatIO.h"
+#include "TinyMSC.h"
 #include "fatfs-arduino-fs.h"
 #include "tinyext4/ArduinoFS.h"
 

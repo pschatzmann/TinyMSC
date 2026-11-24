@@ -1,4 +1,4 @@
-PROJECT_NAME           = "arduino-usb-msc"
+PROJECT_NAME           = "TinyMSC"
 PROJECT_BRIEF          = "USB Mass Storage host and device mode for Arduino"
 OUTPUT_DIRECTORY       = docs
 INPUT                  = README.md src docs

@@ -1,4 +1,4 @@
-# usb-msc
+# TinyMSC
 
 [![arduino-library-badge](https://img.shields.io/badge/Arduino-Library-00979D?logo=arduino&logoColor=white)](https://www.arduino.cc/reference/en/libraries/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -22,30 +22,33 @@ with their own API. Both directions meet at their block driver interface:
 - **Device:** `USBDeviceMSC` exports any block driver of those libraries
   (RAM disk, SD card, NBD export, ...) or your own to the PC.
 
+A sketch only needs `#include "TinyMSC.h"`: it pulls in the host and/or device
+classes, depending on what the selected board and USB mode support.
+
 On ESP32 and RP2040, `fatfs::ArduinoFS` / `tinyext4::ArduinoFS` turn a
 mounted volume into an Arduino `fs::FS`.
 
 ## Documentation
 
-- [Class documentation (Doxygen)](https://pschatzmann.github.io/arduino-usb-msc/annotated.html)
-- [Installation and supported boards](https://github.com/pschatzmann/arduino-usb-msc/wiki/BOARDS)
-- [Host vs. device overview](https://github.com/pschatzmann/arduino-usb-msc/wiki/OVERVIEW)
+- [Class documentation (Doxygen)](https://pschatzmann.github.io/TinyMSC/annotated.html)
+- [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS)
+- [Host vs. device overview](https://github.com/pschatzmann/TinyMSC/wiki/OVERVIEW)
 - Host mode: 
-  - [quick start](https://github.com/pschatzmann/arduino-usb-msc/wiki/HOST_QUICKSTART) 
-  - [block API](https://github.com/pschatzmann/arduino-usb-msc/wiki/BLOCK_API) 
-  - [filesystems](https://github.com/pschatzmann/arduino-usb-msc/wiki/FILESYSTEMS) 
-  - [hubs](https://github.com/pschatzmann/arduino-usb-msc/wiki/MULTIPLE_DEVICES) 
-  - [ESP32](https://github.com/pschatzmann/arduino-usb-msc/wiki/ESP32_NATIVE) 
-  - [STM32](https://github.com/pschatzmann/arduino-usb-msc/wiki/STM32) 
-  - [MAX3421E](https://github.com/pschatzmann/arduino-usb-msc/wiki/MAX3421E) 
-  - [single-port wiring](https://github.com/pschatzmann/arduino-usb-msc/wiki/SINGLE_PORT)
+  - [quick start](https://github.com/pschatzmann/TinyMSC/wiki/HOST_QUICKSTART) 
+  - [block API](https://github.com/pschatzmann/TinyMSC/wiki/BLOCK_API) 
+  - [filesystems](https://github.com/pschatzmann/TinyMSC/wiki/FILESYSTEMS) 
+  - [hubs](https://github.com/pschatzmann/TinyMSC/wiki/MULTIPLE_DEVICES) 
+  - [ESP32](https://github.com/pschatzmann/TinyMSC/wiki/ESP32_NATIVE) 
+  - [STM32](https://github.com/pschatzmann/TinyMSC/wiki/STM32) 
+  - [MAX3421E](https://github.com/pschatzmann/TinyMSC/wiki/MAX3421E) 
+  - [single-port wiring](https://github.com/pschatzmann/TinyMSC/wiki/SINGLE_PORT)
 - Device mode: 
-  - [quick start](https://github.com/pschatzmann/arduino-usb-msc/wiki/DEVICE_QUICKSTART) 
-  - [API](https://github.com/pschatzmann/arduino-usb-msc/wiki/DEVICE_API)
-- [NBD (network block device) storage](https://github.com/pschatzmann/arduino-usb-msc/wiki/NBD): mount a remote disk, or export it over USB
-- [Examples](https://github.com/pschatzmann/arduino-usb-msc/wiki/EXAMPLES) 
-- [Testing](https://github.com/pschatzmann/arduino-usb-msc/wiki/TESTING)
+  - [quick start](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_QUICKSTART) 
+  - [API](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_API)
+- [NBD (network block device) storage](https://github.com/pschatzmann/TinyMSC/wiki/NBD): mount a remote disk, or export it over USB
+- [Examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES) 
+- [Testing](https://github.com/pschatzmann/TinyMSC/wiki/TESTING)
 
 ## License
 
-MIT. See [Licensing](https://github.com/pschatzmann/arduino-usb-msc/wiki/LICENSING).
+MIT. See [Licensing](https://github.com/pschatzmann/TinyMSC/wiki/LICENSING).

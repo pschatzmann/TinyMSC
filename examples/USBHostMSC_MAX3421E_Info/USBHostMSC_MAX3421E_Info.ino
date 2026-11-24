@@ -21,7 +21,7 @@
  */
 
 #include "SPI.h"
-#include "USBHostMSC.h"
+#include "TinyMSC.h"
 
 // CS, INT -- change to match your wiring.
 Adafruit_USBH_Host usbHost(&SPI, /*cs=*/10, /*intr=*/9);

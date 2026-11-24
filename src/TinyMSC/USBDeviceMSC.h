@@ -1,5 +1,5 @@
 /*
- * usb-msc -- USB *device* mode Mass Storage
+ * TinyMSC -- USB *device* mode Mass Storage
  *
  * The counterpart of USBHostMSC: instead of reading a USB stick, the board
  * *is* one. A PC that is plugged into the board's USB port sees a drive
@@ -70,7 +70,7 @@
  * TinyEXT4, or your own class. Only 512-byte sectors are supported.
  *
  * @code
- * #include "USBDeviceMSC.h"
+ * #include "TinyMSC.h"
  * #include "fatfs.h"
  *
  * fatfs::RamIO ram(256);           // 128 KB, formatted by SDClass::begin()

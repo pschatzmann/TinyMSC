@@ -22,7 +22,7 @@ THE SOFTWARE.
 
 ---
 
-This license covers usb-msc's own original code. It does not cover
+This license covers TinyMSC's own original code. It does not cover
 vendored or depended-upon third-party code, which keeps its own license:
 
 - FAT/exFAT support (USBHostMscFatIO) uses the separately maintained

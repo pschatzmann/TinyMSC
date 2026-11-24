@@ -16,7 +16,7 @@
  */
 #include <SPI.h>
 
-#include "USBDeviceMSC.h"
+#include "TinyMSC.h"
 #include "fatfs.h"
 
 #ifndef SD_CS

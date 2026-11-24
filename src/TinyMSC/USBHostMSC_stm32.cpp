@@ -38,7 +38,7 @@
 #include "stm32f4xx_hal_rcc.h"
 #else
 #error \
-    "usb-msc's STM32 host support currently only covers F4/F7 (and " \
+    "TinyMSC's STM32 host support currently only covers F4/F7 (and " \
     "FS-capable H7) OTG_FS parts."
 #endif
 
@@ -46,7 +46,7 @@
 
 #if !CFG_TUH_ENABLED
 #error \
-    "usb-msc on STM32 requires TinyUSB host mode, which is off by " \
+    "TinyMSC on STM32 requires TinyUSB host mode, which is off by " \
     "default in Adafruit_TinyUSB_Arduino for this architecture. Build " \
     "with -DCFG_TUH_ENABLED=1 -- see docs/STM32.md."
 #endif
@@ -54,7 +54,7 @@
 #if defined(STM32H7xx) && !defined(USB2_OTG_FS)
 #error \
     "This STM32H7 part has no separate OTG_FS instance (only OTG_HS); " \
-    "usb-msc doesn't cover that bring-up yet."
+    "TinyMSC doesn't cover that bring-up yet."
 #elif defined(STM32H7xx)
 #define USBHOSTMSC_STM32_FS_IRQn OTG_FS_IRQn
 #define USBHOSTMSC_STM32_FS_IRQHandler OTG_FS_IRQHandler

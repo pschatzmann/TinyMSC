@@ -10,7 +10,7 @@ endforeach()
 # Device mode: USBDeviceMSC exporting block drivers, against a stub of
 # Adafruit_USBD_MSC (tests/stub/Adafruit_TinyUSB.h).
 add_executable(test_device test_device.cpp
-               ${CMAKE_SOURCE_DIR}/src/USBDeviceMSC.cpp)
+               ${CMAKE_SOURCE_DIR}/src/TinyMSC/USBDeviceMSC.cpp)
 target_link_libraries(test_device PRIVATE usbmsc_test)
 target_compile_options(test_device PRIVATE -Wall -Wextra)
 add_test(NAME device COMMAND test_device)
