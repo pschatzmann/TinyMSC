@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msc_0',['usb-msc',['../index.html',1,'']]]
+  ['tinymsc_0',['TinyMSC',['../index.html',1,'']]]
 ];

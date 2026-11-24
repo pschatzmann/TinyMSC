@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-usb-msc: USBDeviceMSC Class Reference</title>
+<title>TinyMSC: USBDeviceMSC Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">arduino-usb-msc
+   <div id="projectname">TinyMSC
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -126,13 +126,13 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exports a block driver to the USB host (PC) as a USB drive. </p>
 <p>The driver can be any class with the FatFs style block interface (disk_initialize(), disk_status(), disk_read(), disk_write(), disk_ioctl()): every fatfs::IO of TinyFATFS and every tinyext4::IO of TinyEXT4, or your own class. Only 512-byte sectors are supported.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="USBDeviceMSC_8h.html">USBDeviceMSC.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="TinyMSC_8h.html">TinyMSC.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;fatfs.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line">fatfs::RamIO ram(256);           <span class="comment">// 128 KB, formatted by SDClass::begin()</span></div>
 <div class="line"><a class="code hl_class" href="classUSBDeviceMSC.html">USBDeviceMSC</a> msc;</div>
 <div class="line"><span class="keywordtype">void</span> setup() { msc.<a class="code hl_function" href="classUSBDeviceMSC.html#a53af7623be8d5438edf29902d2d47542">begin</a>(ram); }</div>
-<div class="ttc" id="aUSBDeviceMSC_8h_html"><div class="ttname"><a href="USBDeviceMSC_8h.html">USBDeviceMSC.h</a></div></div>
+<div class="ttc" id="aTinyMSC_8h_html"><div class="ttname"><a href="TinyMSC_8h.html">TinyMSC.h</a></div></div>
 <div class="ttc" id="aclassUSBDeviceMSC_html"><div class="ttname"><a href="classUSBDeviceMSC.html">USBDeviceMSC</a></div><div class="ttdoc">Exports a block driver to the USB host (PC) as a USB drive.</div><div class="ttdef"><b>Definition</b> USBDeviceMSC.h:81</div></div>
 <div class="ttc" id="aclassUSBDeviceMSC_html_a53af7623be8d5438edf29902d2d47542"><div class="ttname"><a href="classUSBDeviceMSC.html#a53af7623be8d5438edf29902d2d47542">USBDeviceMSC::begin</a></div><div class="ttdeci">bool begin(IO &amp;io, bool startUsb=true)</div><div class="ttdef"><b>Definition</b> USBDeviceMSC.h:95</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -541,8 +541,8 @@ template&lt;class IO &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="USBDeviceMSC_8h_source.html">USBDeviceMSC.h</a></li>
-<li>src/<a class="el" href="USBDeviceMSC_8cpp.html">USBDeviceMSC.cpp</a></li>
+<li>src/TinyMSC/<a class="el" href="USBDeviceMSC_8h_source.html">USBDeviceMSC.h</a></li>
+<li>src/TinyMSC/<a class="el" href="USBDeviceMSC_8cpp.html">USBDeviceMSC.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

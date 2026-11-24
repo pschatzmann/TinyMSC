@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-usb-msc: usb-msc</title>
+<title>TinyMSC: TinyMSC</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">arduino-usb-msc
+   <div id="projectname">TinyMSC
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">usb-msc </div></div>
+  <div class="headertitle"><div class="title">TinyMSC </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> <a href="https://www.arduino.cc/reference/en/libraries/"><img src="https://img.shields.io/badge/Arduino-Library-00979D?logo=arduino&amp;logoColor=white" alt="arduino-library-badge" class="inline"/></a> [<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/>](LICENSE)</p>
@@ -85,36 +85,37 @@ $(function() {
 <li><b>Host:</b> <code><a class="el" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a></code> / <code><a class="el" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a></code> are block drivers for a plugged-in USB drive, like the SD card drivers of those libraries.</li>
 <li><b>Device:</b> <code><a class="el" href="classUSBDeviceMSC.html" title="Exports a block driver to the USB host (PC) as a USB drive.">USBDeviceMSC</a></code> exports any block driver of those libraries (RAM disk, SD card, NBD export, ...) or your own to the PC.</li>
 </ul>
+<p>A sketch only needs <code>#include "TinyMSC.h"</code>: it pulls in the host and/or device classes, depending on what the selected board and USB mode support.</p>
 <p>On ESP32 and RP2040, <code>fatfs::ArduinoFS</code> / <code>tinyext4::ArduinoFS</code> turn a mounted volume into an Arduino <code>fs::FS</code>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Documentation</h1>
 <ul>
-<li><a href="https://pschatzmann.github.io/arduino-usb-msc/annotated.html">Class documentation (Doxygen)</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/BOARDS">Installation and supported boards</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/OVERVIEW">Host vs. device overview</a></li>
+<li><a href="https://pschatzmann.github.io/TinyMSC/annotated.html">Class documentation (Doxygen)</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/BOARDS">Installation and supported boards</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/OVERVIEW">Host vs. device overview</a></li>
 <li>Host mode:<ul>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/HOST_QUICKSTART">quick start</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/BLOCK_API">block API</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/FILESYSTEMS">filesystems</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/MULTIPLE_DEVICES">hubs</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/ESP32_NATIVE">ESP32</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/STM32">STM32</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/MAX3421E">MAX3421E</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/SINGLE_PORT">single-port wiring</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/HOST_QUICKSTART">quick start</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/BLOCK_API">block API</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/FILESYSTEMS">filesystems</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/MULTIPLE_DEVICES">hubs</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/ESP32_NATIVE">ESP32</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/STM32">STM32</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/MAX3421E">MAX3421E</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/SINGLE_PORT">single-port wiring</a></li>
 </ul>
 </li>
 <li>Device mode:<ul>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/DEVICE_QUICKSTART">quick start</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/DEVICE_API">API</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_QUICKSTART">quick start</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_API">API</a></li>
 </ul>
 </li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/NBD">NBD (network block device) storage</a>: mount a remote disk, or export it over USB</li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/EXAMPLES">Examples</a></li>
-<li><a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/TESTING">Testing</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/NBD">NBD (network block device) storage</a>: mount a remote disk, or export it over USB</li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES">Examples</a></li>
+<li><a href="https://github.com/pschatzmann/TinyMSC/wiki/TESTING">Testing</a></li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 License</h1>
-<p>MIT. See <a href="https://github.com/pschatzmann/arduino-usb-msc/wiki/LICENSING">Licensing</a>. </p>
+<p>MIT. See <a href="https://github.com/pschatzmann/TinyMSC/wiki/LICENSING">Licensing</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

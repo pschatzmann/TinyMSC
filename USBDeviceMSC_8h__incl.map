@@ -1,5 +1,5 @@
-<map id="src/USBDeviceMSC.h" name="src/USBDeviceMSC.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="56,5,214,33"/>
+<map id="src/TinyMSC/USBDeviceMSC.h" name="src/TinyMSC/USBDeviceMSC.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="26,5,244,33"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,81,76,109"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,33,71,73,68,69,116,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="100,81,170,109"/>

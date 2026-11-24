@@ -1,9 +1,9 @@
-<map id="src/USBMsc_config.h" name="src/USBMsc_config.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="203,5,358,33"/>
-<area shape="rect" id="Node000002" href="$USBDeviceMSC_8cpp.html" title=" " alt="" coords="5,81,178,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,40,126,83,124,78,230,38"/>
-<area shape="rect" id="Node000003" href="$USBHostMSC_8cpp.html" title=" " alt="" coords="202,81,360,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,47,283,82,279,79,279,51"/>
-<area shape="rect" id="Node000004" href="$USBHostMSC__stm32_8cpp.html" title=" " alt="" coords="384,81,589,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,36,452,80,447,81,331,41"/>
+<map id="src/TinyMSC/USBMsc_config.h" name="src/TinyMSC/USBMsc_config.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="292,5,450,50"/>
+<area shape="rect" id="Node000002" href="$USBDeviceMSC_8cpp.html" title=" " alt="" coords="5,106,239,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,56,159,108,158,103,295,55"/>
+<area shape="rect" id="Node000003" href="$USBHostMSC_8cpp.html" title=" " alt="" coords="262,106,480,134"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="373,64,373,107,369,104,369,67"/>
+<area shape="rect" id="Node000004" href="$USBHostMSC__stm32_8cpp.html" title=" " alt="" coords="505,98,696,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="441,53,548,97,543,97,440,59"/>
 </map>
