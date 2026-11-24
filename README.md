@@ -67,7 +67,7 @@ git clone https://github.com/pschatzmann/TinyEXT4.git
 
 I recommend to use git because you can easily update to the latest version just by executing the ```git pull``` command in the project folders.
 
-Then add `#include "TinyMSC.h"` to your sketch and select the USB mode in the board's Tools menu. ESP32-S2/S3 and RP2040/RP2350 need nothing else; STM32, ESP32-P4 and MAX3421E boards also need the *Adafruit TinyUSB Library*. See [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS) and the [examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES).
+Then add `#include "TinyMSC.h"` to your sketch and select the USB mode in the board's Tools menu. See [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS) and the [examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES).
 
 For desktop builds and tests with CMake, see [Testing](https://github.com/pschatzmann/TinyMSC/wiki/TESTING).
 
