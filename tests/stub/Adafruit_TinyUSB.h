@@ -12,3 +12,12 @@ struct Adafruit_USBD_MSC {
   void setUnitReady(bool) {}
   bool begin() { return true; }
 };
+// Device object: on the desktop the host never enumerates us, so begin()
+// does not re-attach.
+struct Adafruit_USBD_Device {
+  bool mounted() { return false; }
+  void detach() {}
+  void attach() {}
+};
+static Adafruit_USBD_Device TinyUSBDevice;
+static inline void delay(unsigned long) {}
