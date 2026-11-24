@@ -22,30 +22,6 @@ with their own API. Both directions meet at their block driver interface:
 - **Device:** `USBDeviceMSC` exports any block driver of those libraries
   (RAM disk, SD card, NBD export, ...) or your own to the PC.
 
-```cpp
-#include "USBHostMSC.h"
-#include "USBHostMscFatIO.h"
-
-USBHostMSC msc;
-USBHostMscFatIO usbIO(msc);   // the plugged-in drive
-fatfs::SDClass usbFat;        // TinyFATFS
-
-void onMount(uint8_t) {
-  if (usbFat.begin(usbIO)) {
-    fatfs::File f = usbFat.open("/hello.txt");
-    while (f.available()) Serial.write(f.read());
-  }
-}
-void onUnmount(uint8_t) { usbFat.end(); }
-
-void setup() {
-  msc.onMount(onMount);
-  msc.onUnmount(onUnmount);
-  msc.begin();
-}
-void loop() { msc.task(); }
-```
-
 On ESP32 and RP2040, `fatfs::ArduinoFS` / `tinyext4::ArduinoFS` turn a
 mounted volume into an Arduino `fs::FS`.
 
