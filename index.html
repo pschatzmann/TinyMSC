@@ -114,6 +114,17 @@ Documentation</h1>
 <li><a href="https://github.com/pschatzmann/TinyMSC/wiki/TESTING">Testing</a></li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
+Installation in Arduino</h1>
+<p>You can download the library as zip and call include Library -&gt; zip library. Or you can git clone this project into the Arduino libraries folder e.g. with</p>
+<div class="fragment"><div class="line">cd  ~/Documents/Arduino/libraries</div>
+<div class="line">git clone https://github.com/pschatzmann/TinyMSC.git</div>
+</div><!-- fragment --><p>The filesystems come from two separate libraries, which you need to install the same way:</p>
+<div class="fragment"><div class="line">git clone https://github.com/pschatzmann/TinyFATFS.git</div>
+<div class="line">git clone https://github.com/pschatzmann/TinyEXT4.git</div>
+</div><!-- fragment --><p>I recommend to use git because you can easily update to the latest version just by executing the <code>git pull</code> command in the project folders.</p>
+<p>Then add <code>#include "TinyMSC.h"</code> to your sketch and select the USB mode in the board's Tools menu. ESP32-S2/S3 and RP2040/RP2350 need nothing else; STM32, ESP32-P4 and MAX3421E boards also need the <em>Adafruit TinyUSB Library</em>. See <a href="https://github.com/pschatzmann/TinyMSC/wiki/BOARDS">Installation and supported boards</a> and the <a href="https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES">examples</a>.</p>
+<p>For desktop builds and tests with CMake, see <a href="https://github.com/pschatzmann/TinyMSC/wiki/TESTING">Testing</a>.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 License</h1>
 <p>MIT. See <a href="https://github.com/pschatzmann/TinyMSC/wiki/LICENSING">Licensing</a>. </p>
 </div></div><!-- PageDoc -->

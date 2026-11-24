@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['product_5fid_0',['product_id',['../structMSCInquiry.html#a7e4e724a3a15783f03f204762fd3f99e',1,'MSCInquiry']]],
-  ['product_5frev_1',['product_rev',['../structMSCInquiry.html#a50d28a35091be42f7d0a209a7020f95f',1,'MSCInquiry']]]
+  ['onmount_0',['onMount',['../classUSBHostMSC.html#a96b37efcb835a184ff4d4b51b5d2a277',1,'USBHostMSC']]],
+  ['onunmount_1',['onUnmount',['../classUSBHostMSC.html#ae78686d09825ba17b5671ea8326921a1',1,'USBHostMSC']]],
+  ['onwrite_2',['onWrite',['../classUSBDeviceMSC.html#a0425237e134f2fccf8c8d318ec487cc3',1,'USBDeviceMSC']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['sectorcount_0',['sectorCount',['../classUSBHostMscDisk.html#a971e80583c7e947aa553c22b292ccf19',1,'USBHostMscDisk']]],
-  ['setid_1',['setID',['../classUSBDeviceMSC.html#ae259491194748565e6aacfcac4181e0d',1,'USBDeviceMSC']]],
-  ['setwritable_2',['setWritable',['../classUSBDeviceMSC.html#a39c1a514cd1f0817004e830b73e3b41e',1,'USBDeviceMSC']]]
+  ['read_0',['read',['../classUSBHostMscDisk.html#a0227e0c8a3ff0a50e78647b5dd07e6a5',1,'USBHostMscDisk']]],
+  ['readblocks_1',['readBlocks',['../classUSBHostMSC.html#a55ce8bf84cdb9b9dee138d746dd52f12',1,'USBHostMSC']]],
+  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
+  ['ready_3',['ready',['../classUSBHostMSC.html#a51aa5263e8b13aca9537ef13b49a58cd',1,'USBHostMSC::ready()'],['../classUSBHostMscDisk.html#a69934420b097ee52c74d3fe0fcd26b89',1,'USBHostMscDisk::ready()']]]
 ];
