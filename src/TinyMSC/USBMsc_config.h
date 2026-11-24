@@ -19,11 +19,18 @@
 #endif
 
 // Same idea for device mode: skip USBDeviceMSC.cpp when the selected USB
-// stack has no device side (e.g. RP2040 "Adafruit TinyUSB Host (native)").
+// stack has no device side (e.g. RP2040 "Adafruit TinyUSB Host (native)")
+// or the chip has no native USB at all (classic ESP32, ESP32-C3/C6/H2,
+// which can only be a USB host through a MAX3421E chip).
+#if defined(ARDUINO_ARCH_ESP32)
+#include "soc/soc_caps.h"
+#endif
 #ifndef USBDEVMSC_COMPILE
 #if defined(USBDEVMSC_DISABLE)
 #define USBDEVMSC_COMPILE 0
 #elif defined(ARDUINO_ARCH_RP2040) && defined(USE_TINYUSB_HOST)
+#define USBDEVMSC_COMPILE 0
+#elif defined(ARDUINO_ARCH_ESP32) && !SOC_USB_OTG_SUPPORTED
 #define USBDEVMSC_COMPILE 0
 #else
 #define USBDEVMSC_COMPILE 1

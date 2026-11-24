@@ -23,6 +23,14 @@
 #include "soc/soc_caps.h"
 #endif
 
+// STM32 enables host mode with a build flag (-DCFG_TUH_ENABLED=1). Remember
+// it before the TinyUSB config is read: an unpatched Adafruit TinyUSB
+// Library resets it to 0, and USBHostMSC.h should then report the missing
+// patch instead of the host classes silently being left out.
+#if defined(ARDUINO_ARCH_STM32) && defined(CFG_TUH_ENABLED) && CFG_TUH_ENABLED
+#define TINYMSC_STM32_HOST_REQUESTED 1
+#endif
+
 #if defined(ARDUINO_ARCH_ESP32) && SOC_USB_OTG_SUPPORTED &&                    \
     CONFIG_TINYUSB_ENABLED && !CONFIG_IDF_TARGET_ESP32P4 &&                     \
     !defined(USBHOSTMSC_USE_ADAFRUIT_TINYUSB) &&                               \
@@ -42,6 +50,8 @@
 #ifndef TINYMSC_HOST
 #if defined(ARDUINO_ARCH_RP2040) && !defined(USE_TINYUSB_HOST)
 #define TINYMSC_HOST 0
+#elif defined(TINYMSC_STM32_HOST_REQUESTED)
+#define TINYMSC_HOST 1
 #elif defined(CFG_TUH_ENABLED) && defined(CFG_TUH_MSC) && CFG_TUH_ENABLED &&   \
     CFG_TUH_MSC
 #define TINYMSC_HOST 1
