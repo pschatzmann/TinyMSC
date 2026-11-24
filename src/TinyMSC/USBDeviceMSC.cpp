@@ -144,7 +144,16 @@ bool USBDeviceMSC::_begin(const Disk &disk, bool) {
   _msc.setCapacity(_disk.sectors, kSectorSize);
   _msc.setReadWriteCallback(cbRead, cbWrite, cbFlush);
   _msc.setUnitReady(true);
-  return _msc.begin();
+  if (!_msc.begin()) return false;
+  // If the host already enumerated the device (e.g. the core started USB
+  // before setup() and setup() took a while), it does not know about the new
+  // MSC interface yet: re-enumerate so the drive shows up.
+  if (TinyUSBDevice.mounted()) {
+    TinyUSBDevice.detach();
+    delay(10);
+    TinyUSBDevice.attach();
+  }
+  return true;
 }
 
 void USBDeviceMSC::end() {
