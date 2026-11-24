@@ -31,9 +31,11 @@
 #include "tusb.h"
 #else
 #define TINYMSC_ESP32_CORE 0
-#if __has_include(<Adafruit_TinyUSB.h>)
+// Included unconditionally (no __has_include): the Arduino build only adds a
+// library -- also the Adafruit TinyUSB that is bundled with the RP2040 core --
+// to the include path when it sees a plain #include of one of its headers.
+// Both roles need this library on these boards anyway.
 #include <Adafruit_TinyUSB.h>
-#endif
 #endif
 
 // --- Detect the available roles --------------------------------------------
