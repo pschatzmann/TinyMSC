@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,5,79,33"/>
-<area shape="rect" id="Node000001" href="$classUSBHostMscFatIO.html" title=" " alt="" coords="127,5,264,33"/>
+<area shape="rect" id="Node000001" href="$classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,..." alt="" coords="127,5,264,33"/>
 <area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="94,17,129,19,123,19,94,22"/>
 </map>

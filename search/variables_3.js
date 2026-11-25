@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vendor_5fid_0',['vendor_id',['../structMSCInquiry.html#a3c296f46a55e345c5e9ad0650fdaeba4',1,'MSCInquiry']]]
+  ['s_5finstance_0',['s_instance',['../USBDeviceMSC_8cpp.html#ace2711638493a739748e7398e5736ddb',1,'USBDeviceMSC.cpp']]]
 ];

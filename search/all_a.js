@@ -6,5 +6,6 @@ var searchData=
   ['mountcallback_3',['MountCallback',['../classUSBHostMSC.html#ac8a2d6bff930dfa657a951e905425899',1,'USBHostMSC']]],
   ['mounteddevicecount_4',['mountedDeviceCount',['../classUSBHostMSC.html#a80c399a8563922958d0c9f51b7e56a5e',1,'USBHostMSC']]],
   ['mountgeneration_5',['mountGeneration',['../classUSBHostMSC.html#a2b23d0b28e70ab29dd0f1d4de863ecd5',1,'USBHostMSC']]],
-  ['mscinquiry_6',['MSCInquiry',['../structMSCInquiry.html',1,'']]]
+  ['msc_5fcomplete_5fcb_6',['msc_complete_cb',['../USBHostMSC_8cpp.html#a7ec39dbfd32d1e327f54fa6eefff1c84',1,'USBHostMSC.cpp']]],
+  ['mscinquiry_7',['MSCInquiry',['../structMSCInquiry.html',1,'']]]
 ];

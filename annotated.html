@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TinyMSC
+   <div id="projectname">TinyMSC<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -78,9 +78,9 @@ $(function() {
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structMSCInquiry.html" target="_self">MSCInquiry</a></td><td class="desc">SCSI Inquiry response, trimmed to plain C-strings for convenience </td></tr>
 <tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBDeviceMSC.html" target="_self">USBDeviceMSC</a></td><td class="desc">Exports a block driver to the USB host (PC) as a USB drive </td></tr>
 <tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMSC.html" target="_self">USBHostMSC</a></td><td class="desc">Blocking wrapper around TinyUSB's USB Host Mass Storage (tuh_msc_*) class driver. One instance manages the single on-board host controller; multiple mass storage devices (e.g. behind a hub) are addressed by their TinyUSB device address </td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscDisk.html" target="_self">USBHostMscDisk</a></td><td class="desc">One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a> (TinyEXT4) </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscExt4IO.html" target="_self">USBHostMscExt4IO</a></td><td class="desc"></td></tr>
-<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscFatIO.html" target="_self">USBHostMscFatIO</a></td><td class="desc"></td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscDisk.html" target="_self">USBHostMscDisk</a></td><td class="desc">One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,...">USBHostMscExt4IO</a> (TinyEXT4) </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscExt4IO.html" target="_self">USBHostMscExt4IO</a></td><td class="desc">TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned) </td></tr>
+<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUSBHostMscFatIO.html" target="_self">USBHostMscFatIO</a></td><td class="desc">TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not) </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

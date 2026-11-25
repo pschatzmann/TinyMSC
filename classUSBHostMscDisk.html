@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TinyMSC
+   <div id="projectname">TinyMSC<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a> (TinyEXT4).  
+<p>One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,...">USBHostMscExt4IO</a> (TinyEXT4).  
  <a href="classUSBHostMscDisk.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="USBHostMscDisk_8h_source.html">USBHostMscDisk.h</a>&gt;</code></p>
@@ -120,7 +120,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a96863613bfeec19d273505270da94c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a> (TinyEXT4). </p>
+<div class="textblock"><p>One USB mass storage device (LUN) as a device of 512-byte sectors: the common part of the filesystem drivers <a class="el" href="classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...">USBHostMscFatIO</a> (TinyFATFS) and <a class="el" href="classUSBHostMscExt4IO.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,...">USBHostMscExt4IO</a> (TinyEXT4). </p>
 <p>It is bound to a device by <a class="el" href="classUSBHostMscDisk.html#a7bef885ac7318cb212e2e7e1ef9c2a94">init()</a> (the filesystem calls it when it mounts). Once that device is unplugged, <a class="el" href="classUSBHostMscDisk.html#a69934420b097ee52c74d3fe0fcd26b89" title="True while the device bound by init() is still attached.">ready()</a> is false and every transfer fails until <a class="el" href="classUSBHostMscDisk.html#a7bef885ac7318cb212e2e7e1ef9c2a94">init()</a> binds again &ndash; even if another drive shows up at the same USB address in the meantime. So a filesystem never writes what it cached from one drive onto another one.</p>
 <p>With dev_addr == kAnyDevice, <a class="el" href="classUSBHostMscDisk.html#a7bef885ac7318cb212e2e7e1ef9c2a94">init()</a> binds to the first mounted mass storage device: convenient with a single drive. Use explicit addresses (from <a class="el" href="classUSBHostMSC.html#a96b37efcb835a184ff4d4b51b5d2a277" title="Invoked (from task()) when a Mass Storage device mounts.">USBHostMSC::onMount()</a>) when several drives are attached via a hub. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

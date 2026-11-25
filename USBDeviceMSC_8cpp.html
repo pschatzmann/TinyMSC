@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TinyMSC
+   <div id="projectname">TinyMSC<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -74,6 +74,9 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">USBDeviceMSC.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -100,7 +103,211 @@ Include dependency graph for USBDeviceMSC.cpp:</div>
 <area shape="poly" title=" " alt="" coords="253,107,328,149,323,149,252,112"/>
 </map>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af4386360130585a3fb2a71291017db43" id="r_af4386360130585a3fb2a71291017db43"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="USBDeviceMSC_8cpp.html#af4386360130585a3fb2a71291017db43">inRange</a> (uint32_t lba, uint32_t offset, uint32_t size, uint32_t sectors, uint16_t bs)</td></tr>
+<tr class="separator:af4386360130585a3fb2a71291017db43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3704107f9d6ebc5fb8ff14d034b87b5" id="r_ae3704107f9d6ebc5fb8ff14d034b87b5"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="USBDeviceMSC_8cpp.html#ae3704107f9d6ebc5fb8ff14d034b87b5">cbRead</a> (uint32_t lba, void *buf, uint32_t n)</td></tr>
+<tr class="separator:ae3704107f9d6ebc5fb8ff14d034b87b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277fbe379b4132c8b509689c33f73081" id="r_a277fbe379b4132c8b509689c33f73081"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="USBDeviceMSC_8cpp.html#a277fbe379b4132c8b509689c33f73081">cbWrite</a> (uint32_t lba, uint8_t *buf, uint32_t n)</td></tr>
+<tr class="separator:a277fbe379b4132c8b509689c33f73081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c6395e646545e31b44f040f63b4bf7" id="r_ae9c6395e646545e31b44f040f63b4bf7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="USBDeviceMSC_8cpp.html#ae9c6395e646545e31b44f040f63b4bf7">cbFlush</a> ()</td></tr>
+<tr class="separator:ae9c6395e646545e31b44f040f63b4bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ace2711638493a739748e7398e5736ddb" id="r_ace2711638493a739748e7398e5736ddb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUSBDeviceMSC.html">USBDeviceMSC</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="USBDeviceMSC_8cpp.html#ace2711638493a739748e7398e5736ddb">s_instance</a> = nullptr</td></tr>
+<tr class="separator:ace2711638493a739748e7398e5736ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae9c6395e646545e31b44f040f63b4bf7" name="ae9c6395e646545e31b44f040f63b4bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c6395e646545e31b44f040f63b4bf7">&#9670;&#160;</a></span>cbFlush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cbFlush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3704107f9d6ebc5fb8ff14d034b87b5" name="ae3704107f9d6ebc5fb8ff14d034b87b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3704107f9d6ebc5fb8ff14d034b87b5">&#9670;&#160;</a></span>cbRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int32_t cbRead </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a277fbe379b4132c8b509689c33f73081" name="a277fbe379b4132c8b509689c33f73081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a277fbe379b4132c8b509689c33f73081">&#9670;&#160;</a></span>cbWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int32_t cbWrite </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4386360130585a3fb2a71291017db43" name="af4386360130585a3fb2a71291017db43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4386360130585a3fb2a71291017db43">&#9670;&#160;</a></span>inRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool inRange </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>lba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>sectors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>bs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ace2711638493a739748e7398e5736ddb" name="ace2711638493a739748e7398e5736ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2711638493a739748e7398e5736ddb">&#9670;&#160;</a></span>s_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUSBDeviceMSC.html">USBDeviceMSC</a>* s_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

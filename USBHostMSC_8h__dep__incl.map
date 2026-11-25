@@ -4,8 +4,8 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,43,138,83,135,78,205,40"/>
 <area shape="rect" id="Node000003" href="$USBHostMscDisk_8h.html" title=" " alt="" coords="248,81,477,109"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,39,343,80,338,81,273,44"/>
-<area shape="rect" id="Node000004" href="$USBHostMscExt4IO_8h.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,..." alt="" coords="109,157,352,184"/>
+<area shape="rect" id="Node000004" href="$USBHostMscExt4IO_8h.html" title="TinyEXT4 driver for a USB flash drive (see USBHostMscExt4IO)." alt="" coords="109,157,352,184"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,116,255,159,253,154,323,117"/>
-<area shape="rect" id="Node000005" href="$USBHostMscFatIO_8h.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,..." alt="" coords="376,157,610,184"/>
+<area shape="rect" id="Node000005" href="$USBHostMscFatIO_8h.html" title="TinyFATFS driver for a USB flash drive (see USBHostMscFatIO)." alt="" coords="376,157,610,184"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="400,114,473,156,467,156,398,119"/>
 </map>

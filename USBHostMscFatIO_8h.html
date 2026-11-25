@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TinyMSC
+   <div id="projectname">TinyMSC<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not).  
+<p>TinyFATFS driver for a USB flash drive (see <a class="el" href="classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...">USBHostMscFatIO</a>).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;fatfs.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="USBHostMscDisk_8h_source.html">USBHostMscDisk.h</a>&quot;</code><br />
@@ -89,7 +89,7 @@ Include dependency graph for USBHostMscFatIO.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="USBHostMscFatIO_8h__incl.png" border="0" usemap="#asrc_2TinyMSC_2USBHostMscFatIO_8h" alt=""/></div>
 <map name="asrc_2TinyMSC_2USBHostMscFatIO_8h" id="asrc_2TinyMSC_2USBHostMscFatIO_8h">
-<area shape="rect" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,..." alt="" coords="5,5,239,33"/>
+<area shape="rect" title="TinyFATFS driver for a USB flash drive (see USBHostMscFatIO)." alt="" coords="5,5,239,33"/>
 <area shape="rect" title=" " alt="" coords="26,81,90,109"/>
 <area shape="poly" title=" " alt="" coords="109,36,82,71,77,68,112,31"/>
 <area shape="rect" href="USBHostMscDisk_8h.html" title=" " alt="" coords="113,81,259,109"/>
@@ -108,21 +108,11 @@ Include dependency graph for USBHostMscFatIO.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not).  <a href="classUSBHostMscFatIO.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not). </p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="TinyMSC_8h.html">TinyMSC.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classUSBHostMSC.html">USBHostMSC</a> msc;</div>
-<div class="line"><a class="code hl_class" href="classUSBHostMscFatIO.html">USBHostMscFatIO</a> usbIO(msc);   <span class="comment">// first drive that is plugged in</span></div>
-<div class="line">fatfs::SDClass usbFat;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onMount(uint8_t) { usbFat.begin(usbIO); }</div>
-<div class="ttc" id="aTinyMSC_8h_html"><div class="ttname"><a href="TinyMSC_8h.html">TinyMSC.h</a></div></div>
-<div class="ttc" id="aclassUSBHostMSC_html"><div class="ttname"><a href="classUSBHostMSC.html">USBHostMSC</a></div><div class="ttdoc">Blocking wrapper around TinyUSB's USB Host Mass Storage (tuh_msc_*) class driver. One instance manage...</div><div class="ttdef"><b>Definition</b> USBHostMSC.h:153</div></div>
-<div class="ttc" id="aclassUSBHostMscFatIO_html"><div class="ttname"><a href="classUSBHostMscFatIO.html">USBHostMscFatIO</a></div><div class="ttdef"><b>Definition</b> USBHostMscFatIO.h:28</div></div>
-</div><!-- fragment --><p>Unplugging is handled: open files fail, and the next access after a new drive was plugged in mounts that drive (FatFs remounts by itself). For fs::FS (ESP32 / RP2040) wrap the SDClass in fatfs::ArduinoFS (fatfs-arduino-fs.h from TinyFATFS). </p>
+<div class="textblock"><p>TinyFATFS driver for a USB flash drive (see <a class="el" href="classUSBHostMscFatIO.html" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...">USBHostMscFatIO</a>). </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

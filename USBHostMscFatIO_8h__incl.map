@@ -1,5 +1,5 @@
 <map id="src/TinyMSC/USBHostMscFatIO.h" name="src/TinyMSC/USBHostMscFatIO.h">
-<area shape="rect" id="Node000001" title="TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,..." alt="" coords="5,5,239,33"/>
+<area shape="rect" id="Node000001" title="TinyFATFS driver for a USB flash drive (see USBHostMscFatIO)." alt="" coords="5,5,239,33"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="26,81,90,109"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,36,82,71,77,68,112,31"/>
 <area shape="rect" id="Node000003" href="$USBHostMscDisk_8h.html" title=" " alt="" coords="113,81,259,109"/>

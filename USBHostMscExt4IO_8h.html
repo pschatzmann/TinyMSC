@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">TinyMSC
+   <div id="projectname">TinyMSC<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">USB Mass Storage host and device mode for Arduino</div>
   </td>
@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned).  
+<p>TinyEXT4 driver for a USB flash drive (see <a class="el" href="classUSBHostMscExt4IO.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,...">USBHostMscExt4IO</a>).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;TinyEXT4.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="USBHostMscDisk_8h_source.html">USBHostMscDisk.h</a>&quot;</code><br />
@@ -89,7 +89,7 @@ Include dependency graph for USBHostMscExt4IO.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="USBHostMscExt4IO_8h__incl.png" border="0" usemap="#asrc_2TinyMSC_2USBHostMscExt4IO_8h" alt=""/></div>
 <map name="asrc_2TinyMSC_2USBHostMscExt4IO_8h" id="asrc_2TinyMSC_2USBHostMscExt4IO_8h">
-<area shape="rect" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,..." alt="" coords="5,5,249,33"/>
+<area shape="rect" title="TinyEXT4 driver for a USB flash drive (see USBHostMscExt4IO)." alt="" coords="5,5,249,33"/>
 <area shape="rect" title=" " alt="" coords="8,81,102,109"/>
 <area shape="poly" title=" " alt="" coords="113,36,80,71,76,68,115,31"/>
 <area shape="rect" href="USBHostMscDisk_8h.html" title=" " alt="" coords="126,81,272,109"/>
@@ -108,22 +108,11 @@ Include dependency graph for USBHostMscExt4IO.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned).  <a href="classUSBHostMscExt4IO.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned). </p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="TinyMSC_8h.html">TinyMSC.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classUSBHostMSC.html">USBHostMSC</a> msc;</div>
-<div class="line"><a class="code hl_class" href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a> usbIO(msc);   <span class="comment">// first drive that is plugged in</span></div>
-<div class="line">tinyext4::Ext4FS usbExt4;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> onMount(uint8_t) { usbExt4.begin(usbIO); }</div>
-<div class="line"><span class="keywordtype">void</span> onUnmount(uint8_t) { usbExt4.end(); }</div>
-<div class="ttc" id="aTinyMSC_8h_html"><div class="ttname"><a href="TinyMSC_8h.html">TinyMSC.h</a></div></div>
-<div class="ttc" id="aclassUSBHostMSC_html"><div class="ttname"><a href="classUSBHostMSC.html">USBHostMSC</a></div><div class="ttdoc">Blocking wrapper around TinyUSB's USB Host Mass Storage (tuh_msc_*) class driver. One instance manage...</div><div class="ttdef"><b>Definition</b> USBHostMSC.h:153</div></div>
-<div class="ttc" id="aclassUSBHostMscExt4IO_html"><div class="ttname"><a href="classUSBHostMscExt4IO.html">USBHostMscExt4IO</a></div><div class="ttdef"><b>Definition</b> USBHostMscExt4IO.h:31</div></div>
-</div><!-- fragment --><p>Unplugging is handled: every transfer fails until Ext4FS::begin() is called again, so nothing cached from the old drive reaches a new one, and Files of the old mount stay invalid. TinyEXT4 writes no journal: pulling a drive during a write can leave it needing e2fsck. For fs::FS (ESP32 / RP2040) wrap the Ext4FS in tinyext4::ArduinoFS (tinyext4/ArduinoFS.h from TinyEXT4). </p>
+<div class="textblock"><p>TinyEXT4 driver for a USB flash drive (see <a class="el" href="classUSBHostMscExt4IO.html" title="TinyEXT4 driver for a USB flash drive: mount it with tinyext4::Ext4FS (ext2/3/4; whole disk,...">USBHostMscExt4IO</a>). </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
