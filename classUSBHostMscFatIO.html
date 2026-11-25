@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> onMount(uint8_t) { usbFat.begin(usbIO); }</div>
 <div class="ttc" id="aTinyMSC_8h_html"><div class="ttname"><a href="TinyMSC_8h.html">TinyMSC.h</a></div></div>
-<div class="ttc" id="aclassUSBHostMSC_html"><div class="ttname"><a href="classUSBHostMSC.html">USBHostMSC</a></div><div class="ttdoc">Blocking wrapper around TinyUSB's USB Host Mass Storage (tuh_msc_*) class driver. One instance manage...</div><div class="ttdef"><b>Definition</b> USBHostMSC.h:153</div></div>
+<div class="ttc" id="aclassUSBHostMSC_html"><div class="ttname"><a href="classUSBHostMSC.html">USBHostMSC</a></div><div class="ttdoc">Blocking wrapper around TinyUSB's USB Host Mass Storage (tuh_msc_*) class driver. One instance manage...</div><div class="ttdef"><b>Definition</b> USBHostMSC.h:148</div></div>
 <div class="ttc" id="aclassUSBHostMscFatIO_html"><div class="ttname"><a href="classUSBHostMscFatIO.html">USBHostMscFatIO</a></div><div class="ttdoc">TinyFATFS driver for a USB flash drive: mount it with fatfs::SDClass (FAT12/16/32,...</div><div class="ttdef"><b>Definition</b> USBHostMscFatIO.h:31</div></div>
 </div><!-- fragment --><p>Unplugging is handled: open files fail, and the next access after a new drive was plugged in mounts that drive (FatFs remounts by itself). For fs::FS (ESP32 / RP2040) wrap the SDClass in fatfs::ArduinoFS (fatfs-arduino-fs.h from TinyFATFS). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

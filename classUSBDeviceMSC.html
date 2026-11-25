@@ -303,7 +303,7 @@ template&lt;class IO &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Registers the MSC interface and exports <code>io</code> (which must outlive the export). Must be called before the USB stack starts: on boards where the core starts USB itself (RP2040, SAMD, nRF52) call it first thing in setup(), before Serial.begin(); on ESP32-S2/S3 it calls USB.begin() for you unless startUsb is false (set it false if you add other USB classes and call USB.begin() yourself). </p>
+<p>Registers the MSC interface and exports <code>io</code> (which must outlive the export). Must be called before the USB stack starts: on boards where the core starts USB itself (RP2040, SAMD, nRF52) call it first thing in setup(), before Serial.begin(); on ESP32-S2/S3/P4 it calls USB.begin() for you unless startUsb is false (set it false if you add other USB classes and call USB.begin() yourself). </p>
 
 </div>
 </div>

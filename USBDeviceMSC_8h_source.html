@@ -92,7 +92,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * with the same disk_read()/disk_write()/disk_ioctl() interface.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * Built on the device-mode MSC class that is already part of the platform:</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *   - ESP32-S2/S3 (arduino-esp32 core): the core&#39;s USBMSC. Select</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *   - ESP32-S2/S3/P4 (arduino-esp32 core): the core&#39;s USBMSC. Select</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *     Tools &gt; USB Mode &gt; &quot;USB-OTG (TinyUSB)&quot;.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *   - everything else (RP2040, SAMD, nRF52, STM32, ...): Adafruit_USBD_MSC</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *     from the &quot;Adafruit TinyUSB Library&quot;. On RP2040 select</span></div>
@@ -135,7 +135,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#if !__has_include(&lt;Adafruit_TinyUSB.h&gt;)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#error \</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    &quot;USBDeviceMSC needs the &#39;Adafruit TinyUSB Library&#39; on this board &quot; \</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    &quot;(install it from the Library Manager). It is NOT needed on ESP32-S2/S3.&quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    &quot;(install it from the Library Manager). It is NOT needed on ESP32-S2/S3/P4.&quot;</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;Adafruit_TinyUSB.h&gt;</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#if !(CFG_TUD_ENABLED &amp;&amp; CFG_TUD_MSC)</span></div>
