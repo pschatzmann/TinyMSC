@@ -5,10 +5,10 @@
 
 USB **Mass Storage** for Arduino -- the "USB stick" protocol, in both directions:
 
-- **USB host:** your board is the computer. Plug a USB flash drive into the
-  board and read/write its files (FAT, exFAT, ext2/3/4), no SD card slot needed.
 - **USB device:** your board is the USB stick. Plug it into a PC and it shows
   up as a drive, backed by RAM, an SD card or any storage you provide.
+- **USB host:** your board is the computer. Plug a USB flash drive into the
+  board and read/write its files (FAT, exFAT, ext2/3/4), no SD card slot needed.
 
 A board's USB port does one role at a time; pick it in the board's USB menu.
 
@@ -17,10 +17,10 @@ This library does the USB part only. The filesystems are
 and [TinyEXT4](https://github.com/pschatzmann/TinyEXT4) (ext2/3/4), used
 with their own API. Both directions meet at their block driver interface:
 
-- **Host:** `USBHostMscFatIO` / `USBHostMscExt4IO` are block drivers for a
-  plugged-in USB drive, like the SD card drivers of those libraries.
 - **Device:** `USBDeviceMSC` exports any block driver of those libraries
   (RAM disk, SD card, NBD export, ...) or your own to the PC.
+- **Host:** `USBHostMscFatIO` / `USBHostMscExt4IO` are block drivers for a
+  plugged-in USB drive, like the SD card drivers of those libraries.
 
 A sketch only needs `#include "TinyMSC.h"`: it pulls in the host and/or device
 classes, depending on what the selected board and USB mode support.
@@ -33,6 +33,9 @@ mounted volume into an Arduino `fs::FS`.
 - [Class documentation (Doxygen)](https://pschatzmann.github.io/TinyMSC/annotated.html)
 - [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS)
 - [Host vs. device overview](https://github.com/pschatzmann/TinyMSC/wiki/OVERVIEW)
+- Device mode: 
+  - [quick start](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_QUICKSTART) 
+  - [API](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_API)
 - Host mode: 
   - [quick start](https://github.com/pschatzmann/TinyMSC/wiki/HOST_QUICKSTART) 
   - [block API](https://github.com/pschatzmann/TinyMSC/wiki/BLOCK_API) 
@@ -42,9 +45,6 @@ mounted volume into an Arduino `fs::FS`.
   - [STM32](https://github.com/pschatzmann/TinyMSC/wiki/STM32) 
   - [MAX3421E](https://github.com/pschatzmann/TinyMSC/wiki/MAX3421E) 
   - [single-port wiring](https://github.com/pschatzmann/TinyMSC/wiki/SINGLE_PORT)
-- Device mode: 
-  - [quick start](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_QUICKSTART) 
-  - [API](https://github.com/pschatzmann/TinyMSC/wiki/DEVICE_API)
 - [NBD (network block device) storage](https://github.com/pschatzmann/TinyMSC/wiki/NBD): mount a remote disk, or export it over USB
 - [Examples](https://github.com/pschatzmann/TinyMSC/wiki/EXAMPLES) 
 - [Testing](https://github.com/pschatzmann/TinyMSC/wiki/TESTING)

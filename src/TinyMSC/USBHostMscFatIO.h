@@ -2,6 +2,14 @@
 
 /**
  * @file USBHostMscFatIO.h
+ * @brief TinyFATFS driver for a USB flash drive (see USBHostMscFatIO).
+ */
+
+#include <fatfs.h>
+
+#include "USBHostMscDisk.h"
+
+/**
  * @brief TinyFATFS driver for a USB flash drive: mount it with
  * fatfs::SDClass (FAT12/16/32, exFAT; MBR partitioned or not).
  *
@@ -20,11 +28,6 @@
  * fs::FS (ESP32 / RP2040) wrap the SDClass in fatfs::ArduinoFS
  * (fatfs-arduino-fs.h from TinyFATFS).
  */
-
-#include <fatfs.h>
-
-#include "USBHostMscDisk.h"
-
 class USBHostMscFatIO : public fatfs::IO {
 public:
   USBHostMscFatIO() = default;

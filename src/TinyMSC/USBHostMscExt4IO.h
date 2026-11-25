@@ -2,6 +2,14 @@
 
 /**
  * @file USBHostMscExt4IO.h
+ * @brief TinyEXT4 driver for a USB flash drive (see USBHostMscExt4IO).
+ */
+
+#include <TinyEXT4.h>
+
+#include "USBHostMscDisk.h"
+
+/**
  * @brief TinyEXT4 driver for a USB flash drive: mount it with
  * tinyext4::Ext4FS (ext2/3/4; whole disk, MBR or GPT partitioned).
  *
@@ -23,11 +31,6 @@
  * (ESP32 / RP2040) wrap the Ext4FS in tinyext4::ArduinoFS
  * (tinyext4/ArduinoFS.h from TinyEXT4).
  */
-
-#include <TinyEXT4.h>
-
-#include "USBHostMscDisk.h"
-
 class USBHostMscExt4IO : public tinyext4::IO {
 public:
   USBHostMscExt4IO() = default;
