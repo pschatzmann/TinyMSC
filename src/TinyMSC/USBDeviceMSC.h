@@ -8,7 +8,7 @@
  * with the same disk_read()/disk_write()/disk_ioctl() interface.
  *
  * Built on the device-mode MSC class that is already part of the platform:
- *   - ESP32-S2/S3 (arduino-esp32 core): the core's USBMSC. Select
+ *   - ESP32-S2/S3/P4 (arduino-esp32 core): the core's USBMSC. Select
  *     Tools > USB Mode > "USB-OTG (TinyUSB)".
  *   - everything else (RP2040, SAMD, nRF52, STM32, ...): Adafruit_USBD_MSC
  *     from the "Adafruit TinyUSB Library". On RP2040 select
@@ -51,7 +51,7 @@
 #if !__has_include(<Adafruit_TinyUSB.h>)
 #error \
     "USBDeviceMSC needs the 'Adafruit TinyUSB Library' on this board " \
-    "(install it from the Library Manager). It is NOT needed on ESP32-S2/S3."
+    "(install it from the Library Manager). It is NOT needed on ESP32-S2/S3/P4."
 #endif
 #include <Adafruit_TinyUSB.h>
 #if !(CFG_TUD_ENABLED && CFG_TUD_MSC)
@@ -89,7 +89,7 @@ public:
   /// Registers the MSC interface and exports `io` (which must outlive the
   /// export). Must be called before the USB stack starts: on boards where
   /// the core starts USB itself (RP2040, SAMD, nRF52) call it first thing
-  /// in setup(), before Serial.begin(); on ESP32-S2/S3 it calls USB.begin()
+  /// in setup(), before Serial.begin(); on ESP32-S2/S3/P4 it calls USB.begin()
   /// for you unless startUsb is false (set it false if you add other USB
   /// classes and call USB.begin() yourself).
   template <class IO> bool begin(IO &io, bool startUsb = true) {

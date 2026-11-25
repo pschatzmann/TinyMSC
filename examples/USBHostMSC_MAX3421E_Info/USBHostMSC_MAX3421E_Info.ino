@@ -9,8 +9,8 @@
  * Board setup:
  *  - Classic ESP32 (no native USB): this is the only way to do USB host.
  *  - ESP32-S2/S3/P4 (native USB-OTG): only needed if you're deliberately
- *    using a MAX3421E chip instead of the native port -- add
- *    -DCFG_TUH_MAX3421=1 as a build flag. Otherwise use USBHostMSC_Info.
+ *    using a MAX3421E chip instead of the native port. Otherwise use
+ *    USBHostMSC_Info.
  *  - SAMD21/SAMD51/nRF52840: also supported by Adafruit_TinyUSB_Arduino's
  *    MAX3421E driver; adjust the pins below for your wiring.
  *

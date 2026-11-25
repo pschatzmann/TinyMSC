@@ -11,7 +11,7 @@
  * SDClass, end() it, and call msc.mediaPresent(true) afterwards.
  *
  * Wiring: SD card on the default SPI pins, chip select = SD_CS below.
- * ESP32-S2/S3: Tools > USB Mode > "USB-OTG (TinyUSB)".
+ * ESP32-S2/S3/P4: Tools > USB Mode > "USB-OTG (TinyUSB)".
  * RP2040:      Tools > USB Stack > "Adafruit TinyUSB" (device stack).
  */
 #include <SPI.h>

@@ -11,11 +11,11 @@
  *              RP2040 (e.g. an "RP2040 USB Host" board, or bit-bang wiring
  *              on a plain Pico). Serial output goes over Serial1 since the
  *              native USB port is now the host port.
- *  - ESP32-S2/S3: Tools > USB Mode > "USB-OTG (TinyUSB)" (arduino-esp32
+ *  - ESP32-S2/S3/P4: Tools > USB Mode > "USB-OTG (TinyUSB)" (arduino-esp32
  *              core >= 3.3; the core's own TinyUSB is used, no extra
  *              library). The native USB port is now the host port, so
- *              Serial is UART0 (TX=GPIO43, RX=GPIO44): connect a USB-UART
- *              adapter -- see the wiki page SINGLE_PORT.
+ *              Serial is UART0 (on S2/S3: TX=GPIO43, RX=GPIO44): connect a
+ *              USB-UART adapter -- see the wiki page SINGLE_PORT.
  *  - STM32:    (F4/F7 OTG_FS parts, e.g. BlackPill F411CE) Requires a
  *              small patch to Adafruit_TinyUSB_Arduino and building with
  *              -DCFG_TUH_ENABLED=1 -- see the wiki page STM32. Serial

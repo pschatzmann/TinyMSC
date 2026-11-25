@@ -6,12 +6,12 @@
  * flash drive attached to the board's USB host port.
  *
  * Built on TinyUSB: the copy that is built into the arduino-esp32 core
- * (ESP32-S2/S3), the one bundled with the RP2040 core, or otherwise the
+ * (ESP32-S2/S3/P4), the one bundled with the RP2040 core, or otherwise the
  * "Adafruit TinyUSB Library". USB Host mode must be selected for the
  * target board:
  *   - RP2040 (earlephilhower core): Tools > USB Stack >
  *     "Adafruit TinyUSB Host (native)"
- *   - ESP32-S2/S3 (arduino-esp32 core >= 3.3): uses the TinyUSB that is
+ *   - ESP32-S2/S3/P4 (arduino-esp32 core >= 3.3): uses the TinyUSB that is
  *     built into the core -- nothing else to install. Tools > USB Mode >
  *     "USB-OTG (TinyUSB)". Serial is then UART0 (see docs/SINGLE_PORT.md).
  *   - STM32 (STM32duino core, F4/F7 OTG_FS parts only -- see
@@ -19,10 +19,9 @@
  *     small Adafruit_TinyUSB_Arduino patch described in
  *     docs/STM32.md (host mode is off by default there and needs two local
  *     changes to that library to enable safely)
- *   - ESP32-P4 (write-back cache) and anything built with
- *     -DUSBHOSTMSC_USE_ADAFRUIT_TINYUSB use the "Adafruit TinyUSB Library"
- *     instead, which needs a small patch for its native host controller --
- *     see docs/ESP32_NATIVE.md.
+ *   - anything built with -DUSBHOSTMSC_USE_ADAFRUIT_TINYUSB uses the
+ *     "Adafruit TinyUSB Library" instead, which needs a small patch for its
+ *     native host controller -- see extras/adafruit_tinyusb_esp32_native_host.patch.
  *   - MCUs with no USB peripheral at all (classic ESP32, ESP32-C3/C6/H2,
  *     SAMD, nRF52, ...) can still act as a USB host via an external
  *     MAX3421E host-shield chip wired over SPI -- see docs/MAX3421E.md.
@@ -30,18 +29,14 @@
 #pragma once
 
 // Which TinyUSB stack do we sit on?
-//  - ESP32-S2/S3 (arduino-esp32 >= 3.3): the TinyUSB host stack that is
+//  - ESP32-S2/S3/P4 (arduino-esp32 >= 3.3): the TinyUSB host stack that is
 //    already compiled into the core, started with USBHost.begin().
-//  - everything else (RP2040 core, STM32, MAX3421E boards, ESP32-P4, or
+//  - everything else (RP2040 core, STM32, MAX3421E boards, or
 //    -DUSBHOSTMSC_USE_ADAFRUIT_TINYUSB): the "Adafruit TinyUSB Library".
-// ESP32-P4 stays on the Adafruit path: its internal RAM sits behind a
-// write-back data cache, so DMA buffers need cache maintenance that is not
-// implemented here. (On S2/S3 the internal-RAM bounce buffer is uncached.)
 #if defined(ARDUINO_ARCH_ESP32) && !defined(USBHOSTMSC_USE_ADAFRUIT_TINYUSB)
 #include "sdkconfig.h"
 #include "soc/soc_caps.h"
-#if SOC_USB_OTG_SUPPORTED && !CONFIG_IDF_TARGET_ESP32P4 &&                     \
-    __has_include(<USBHost.h>)
+#if SOC_USB_OTG_SUPPORTED && __has_include(<USBHost.h>)
 #define USBHOSTMSC_ESP32_CORE 1
 #endif
 #endif

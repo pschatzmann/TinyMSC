@@ -32,7 +32,7 @@
 #endif
 
 #if defined(ARDUINO_ARCH_ESP32) && SOC_USB_OTG_SUPPORTED &&                    \
-    CONFIG_TINYUSB_ENABLED && !CONFIG_IDF_TARGET_ESP32P4 &&                     \
+    CONFIG_TINYUSB_ENABLED &&                                                   \
     !defined(USBHOSTMSC_USE_ADAFRUIT_TINYUSB) &&                               \
     !defined(USBDEVMSC_USE_ADAFRUIT_TINYUSB)
 #define TINYMSC_ESP32_CORE 1

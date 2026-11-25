@@ -11,7 +11,7 @@
  * by default; set EXT4_READ_WRITE to 1 to let a Linux PC write to it.
  *
  * Wiring: SD card on the default SPI pins, chip select = SD_CS below.
- * ESP32-S2/S3: Tools > USB Mode > "USB-OTG (TinyUSB)".
+ * ESP32-S2/S3/P4: Tools > USB Mode > "USB-OTG (TinyUSB)".
  * RP2040:      Tools > USB Stack > "Adafruit TinyUSB" (device stack).
  */
 #include <SPI.h>

@@ -3,7 +3,7 @@
  *
  * Mounts a FAT12/16/32 or exFAT formatted USB flash drive with TinyFATFS and
  * recursively lists its contents. Works the same on every supported board
- * (ESP32-S2/S3, RP2040, STM32): SDClass / File have the API of
+ * (ESP32-S2/S3/P4, RP2040, STM32): SDClass / File have the API of
  * the Arduino SD library.
  *
  * USBHostMscFatIO is the TinyFATFS driver for the drive; unplugging is
