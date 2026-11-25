@@ -28,6 +28,18 @@ classes, depending on what the selected board and USB mode support.
 On ESP32 and RP2040, `fatfs::ArduinoFS` / `tinyext4::ArduinoFS` turn a
 mounted volume into an Arduino `fs::FS`.
 
+## Supported boards
+
+| Board | Host mode | Device mode | USB stack |
+| --- | --- | --- | --- |
+| ESP32-S2, ESP32-S3, ESP32-P4 | yes | yes | TinyUSB built into the arduino-esp32 core (>= 3.3), Tools > USB Mode > "USB-OTG (TinyUSB)" |
+| RP2040 | yes | yes | Tools > USB Stack > "Adafruit TinyUSB Host (native)" (host) or "Adafruit TinyUSB" (device) |
+| STM32 (F4/F7 OTG_FS) | yes, with a small library patch | yes | Adafruit TinyUSB Library |
+| SAMD21/SAMD51, nRF52840 | yes, via a MAX3421E host shield | yes | Adafruit TinyUSB Library |
+| Classic ESP32, ESP32-C3/C6/H2 | yes, via a MAX3421E host shield | no | Adafruit TinyUSB Library (host via MAX3421E only) |
+
+Serial output on boards whose native USB port becomes the host port (ESP32-S2/S3/P4, RP2040, STM32) goes over a UART instead. See [Installation and supported boards](https://github.com/pschatzmann/TinyMSC/wiki/BOARDS) for wiring and the full list.
+
 ## Documentation
 
 - [Class documentation (Doxygen)](https://pschatzmann.github.io/TinyMSC/annotated.html)
